@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post_list_item_parent"
+    android:layout_height="100dp"
+    android:layout_width="match_parent"
+    android:padding="@dimen/recycler_padding"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:background="@drawable/post_item_selector"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icons_arrow"
+            />
+
+        <TextView
+            android:id="@+id/post_list_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/arrow"
+            android:gravity="center"
+            android:textAllCaps="true"
+            tools:text="title"
+            android:textSize="22sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_below="@+id/post_list_item_title"
+            android:id="@+id/post_list_item_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/arrow"
+            android:ellipsize="end"
+            android:maxLines="4"
+            tools:text="@tools:sample/lorem/random"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/recycler_padding"
+        android:background="@color/line"
+        />
+
+</LinearLayout>

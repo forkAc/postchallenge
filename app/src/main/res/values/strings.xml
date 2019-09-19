@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PostChallenge</string>
+
+    <string name="empty">Try again</string>
 </resources>
